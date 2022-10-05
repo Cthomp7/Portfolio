@@ -1,13 +1,13 @@
-const navItems = document.querySelectorAll('.navigation ul a');
+// const navItems = document.querySelectorAll('.navigation ul a');
 
-function init(){
-    let star = `<img src="images/header-star.png">`
-}
+// function init(){
+//     let star = `<img src="images/header-star.png">`
+// }
 
-navItems.addEventListener("mouseover", function(){
+// navItems.addEventListener("mouseover", function(){
     //I need my image to be absolute, but the target element to be relative to the <a> element 
     //create div element and then with that newly created div let's append that star img in there.
-});
+// });
 
 
 
@@ -18,7 +18,7 @@ navItems.addEventListener("mouseover", function(){
 
 
 
-window.onload = function() {init();};
+// window.onload = function() {init();};
 
 //let menuItems = document.querySelectorAll('.')
 
