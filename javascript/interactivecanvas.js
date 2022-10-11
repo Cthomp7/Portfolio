@@ -2,6 +2,7 @@ let mouseY;
 let mouseX;
 
 let particle;
+let pDIV;
 let o = 1.0;
 
 function init(){
@@ -24,9 +25,10 @@ function triggerCanvas() {
 }
 
 class Particle {
-    constructor (x, y) {
+    constructor (x, y, opacity) {
         this.x = x;
         this.y = y;
+        this.opacity = opacity;
 
         this.particleSystem = function(p) {
             p.style.backgroundColor = "yellow";
@@ -45,15 +47,11 @@ class Particle {
             drawing.appendChild(p);
         }
 
-        this.born = function() {
-            //let pushDirection = Math.random(0, 360); //to push a random initial push direction
-            // this.x = 
-            // this.y = 
-        }
-
         this.die = function(p) {
-            p.style.opacity = ".1";
-            if (p.style.opacity <= 0) {
+            this.opacity -= .5;
+            console.log(this.opacity);
+            // p.style.opacity = this.opacity;
+            if (this.opacity <= 0) {
                 p.remove();
             }
         }
@@ -61,10 +59,12 @@ class Particle {
 }
 
 function draw() {
-    particle = new Particle (mouseX, mouseY);
+    particle = new Particle (mouseX, mouseY, 1);
     particle.makeParticle();
-    let pDIV = document.getElementById("p");
+    pDIV = document.getElementById("p");
     particle.die(pDIV);
 }
+
+pDIV.addEventListener("")
 
 window.onload = function() {init();};

@@ -124,15 +124,7 @@ body {
     }
 }
 
-/* CANVAS */
-
-#drawing {
-    /* margin-top: 1rem; fix margin for canvas */
-    background-color: rgb(23, 23, 23);
-    width: 100vw;
-    height: 35rem;
-    /* position: absolute; */
-}
+/* CONTENT */
 
 .title {
     color: white;
