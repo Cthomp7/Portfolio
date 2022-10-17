@@ -44,10 +44,28 @@ h2 {
 .portfolio-nav li a {
     text-decoration: none;
     color: white;
+    position: relative;
 }
 
 .portfolio-nav li a:hover {
+    transition: 0.35s linear;
     color: rgb(241, 108, 60);
+}
+
+.portfolio-nav li a::after {
+    content: '';
+    position: absolute;
+    left: 50%; bottom: 0;
+    right: 50%;
+    height: 5px;
+    transition: 0.35s linear;
+    border-radius: 25px;
+}
+
+.portfolio-nav li a:hover::after {
+    background-color: rgb(241, 108, 60);
+    left: 20;
+    right: 0;
 }
 
 .portfolio-nav li span {
