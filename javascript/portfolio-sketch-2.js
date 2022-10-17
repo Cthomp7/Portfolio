@@ -19,9 +19,9 @@ function setup() {
 }
 
 function draw() {
-    noStroke();
-    fill(122, 223, 71);
-    square (mouseX, mouseY, w);
+    // noStroke();
+    // fill(122, 223, 71);
+    // square (mouseX, mouseY, w);
 }
 
 function backgroundDrawing() {
