@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Menlo';
+    src: url('fonts/Menlo-Regular.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 229, 85);
+}
+
+.navigation ul a li {
+    color: rgb(237, 85, 30);
+}
+
+#portfolio {
+    color: rgb(100, 52, 34);
+}
+
+#portfolio:hover {
+    color: white;
+}
+
+.header-text-left, .header-text-right {
+    color: rgb(204, 148, 17);
+}
+
+.portfolio-nav {
+    margin: 1em 5em;
+}
+
+h2 {
+    font-family: 'Menlo', sans-serif;
+    color: rgb(204, 148, 17);
+}
+
+.portfolio-nav li {
+    font-size: 5rem;
+    list-style: none;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.portfolio-nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+.portfolio-nav li a:hover {
+    color: rgb(241, 108, 60);
+}
+
+.portfolio-nav li span {
+    color: rgb(204, 148, 17);
+}
+
+.empty-space {
+    text-align: center;
+    min-width: 100%;
+    margin: 0 auto;
+    padding: 2em 0;
+    font-family: 'Menlo', sans-serif;
+    color: rgb(204, 148, 17);
+}
+
+.highlighted-projects-title {
+    margin: 1em 5em;
+}
+
+.highlighted-projects-title h1 {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-size: 5rem;
+    font-weight: 400;
+    margin: 0 1em;
+}
+
+.highlighted-projects-title h1::before {
+    content: "function";
+    font-family: 'Menlo', sans-serif;
+    color: rgb(241, 108, 60);
+    font-size: 2.5rem;
+    display: block;
+    margin: 0 -1em;
+}
+
+.highlighted-projects-gallery {
+    display: flex;
+    margin: 0 auto;
+}
+
+.temp-photo {
+    width: 40%;
+    height: 20em;
+    margin: 1em auto;
+    background-color: white;
+}
+
+.p5Canvas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -10;
+    opacity: 8%;
+    min-width: 100vw;
+    min-height: 100vh;
+}

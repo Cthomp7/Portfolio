@@ -9,13 +9,26 @@ class Particle {
     }
 }
 
-// function init(){
-//     let drawing = document.getElementById('defaultCanvas0');
-// }
+// ****************** ISSUE! ******************
+//I am trying to trigger the "drawing function" through a boolean (isHover) which is controlled by an if statement located in the draw() function.
 
-// if (drawing != null) {
-//     drawing.addEventListener("mouseover", Hovering, {passive: true});
-// }
+//No console errors, so I must be using the wrong syntax
+
+//References I viewed:
+//  https://api.jquery.com/mouseenter/
+//  https://api.jquery.com/hover/#hover1
+
+$('.p5canvas').mouseenter(function (){
+  isHover = true;
+  console.log("triggered");
+}).mouseleave( function () {
+  isHover = false;
+});
+
+// $('.p5canvas').hover(function (){
+//   isHover = true;
+//   console.log("triggered");
+// });
 
 function setup() {
     noStroke();
@@ -30,12 +43,12 @@ function setup() {
 
 function draw() {
     //For Website Config
-    let width = window.innerWidth
-    createCanvas(width, 550);
+    let width = window.innerWidth;
+    createCanvas(width, 500);
     background(35);
 
     //For Drawing Config
-    //if (Hovering === true){
+  //if (isHover == true){
     let p = new Particle (mouseX, mouseY);
     dots.push(p);
     
@@ -48,7 +61,5 @@ function draw() {
     if (dots[0].opacity <= 0) {
       dots.shift();    
     }
-//}
+  //}
 }
-
-//window.onload = function() {init();};

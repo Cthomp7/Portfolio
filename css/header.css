@@ -1,17 +1,10 @@
 @font-face {
     font-family: 'Menlo';
-    src: url('fonts/Menlo-Regular.ttf');
+    src: url('../fonts/Menlo-Regular.ttf');
 }
 @font-face {
     font-family: 'Pixelade';
-    src: url('fonts/pixelade-webfont.woff');
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: rgb(58, 58, 58);
+    src: url('../fonts/pixelade-webfont.woff');
 }
 
 .nav-controller {
@@ -120,55 +113,4 @@ body {
     .star {
         width: 2.7rem;
     }
-}
-
-@media (max-width: 450px) {
-    
-}
-
-/* CONTENT */
-
-.title {
-    color: white;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 100;
-    font-size: 4rem;
-    margin: 0 0;
-    padding: 0;
-}
-
-.sub-title {
-    font-family: 'Menlo', sans-serif;
-    font-weight: 200;
-    color: rgb(144, 144, 144);
-    margin: .3rem 0;
-    padding: 0 0;
-}
-
-.code {
-    font-family: 'Menlo', sans-serif;
-    font-size: .6rem;
-    color: rgb(85, 85, 85);
-    margin: 0;
-    padding: 0;
-}
-
-.code-push {
-    margin-left: 1.5rem;
-}
-
-#intro {
-    display: flex;
-}
-
-#sub-intro {
-    position: absolute;
-    top: 13rem;
-    left: 9rem;
-    margin: 0;
-    padding: 0;
-}
-
-#sub-intro-col-2 {
-    margin: 1rem 0;
 }

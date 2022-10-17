@@ -3,9 +3,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chloe</title>
-    <link rel="stylesheet" href="style.css" />
-
     <!-- FONT LINKS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,17 +10,20 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    
-    <!-- SCRIPTS -->
-    <script src="javascript/libraries/p5.js"></script>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/portfolio-2.css" />
+
+    <script src="../javascript/libraries/p5.js"></script>
+    <script src="../javascript/portfolio-sketch-2.js" defer></script>
+
     <script
       src="https://code.jquery.com/jquery-3.6.1.js"
       integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
       crossorigin="anonymous"
     ></script>
   </head>
-
-  <body id="body">
+  <body>
     <header>
       <div class="nav-controller">
         <div class="nav-controller-2">
@@ -32,18 +32,18 @@
               <p>&ltheader&gt</p>
             </div>
             <ul>
-              <a href="#"
+              <a href="../index.html"
                 ><li>
                   <div>
-                    <img class="star" src="images/header-star.png" />
+                    <img class="star" src="../images/header-star.png" />
                   </div>
                   About
                 </li></a
               >
-              <a href="pages/portfolio.html"
-                ><li>
+              <a href="portfolio.html"
+                ><li id="portfolio">
                   <div>
-                    <img class="star" src="images/header-star.png" />
+                    <img class="star" src="../images/header-star.png" />
                   </div>
                   Portfolio
                 </li></a
@@ -51,7 +51,7 @@
               <a href="#"
                 ><li>
                   <div>
-                    <img class="star" src="images/header-star.png" />
+                    <img class="star" src="../images/header-star.png" />
                   </div>
                   Experience
                 </li></a
@@ -59,7 +59,7 @@
               <a href="#"
                 ><li>
                   <div>
-                    <img class="star" src="images/header-star.png" />
+                    <img class="star" src="../images/header-star.png" />
                   </div>
                   Contact
                 </li></a
@@ -73,25 +73,29 @@
       </div>
     </header>
     <main>
-      <div id="intro">
-        <div id="sub-intro">
-          <p class="code">&lth1&gt</p>
-          <h1 class="title code-push">Hi, I am Chloe!</h1>
-          <p class="code">&lt/h1&gt</p>
-
-          <div id="sub-intro-col-2">
-            <p class="code">&lth2&gt</p>
-
-            <h2 class="sub-title code-push">Artist & Programmer</h2>
-            <div class="code-end"></div>
-            <p class="code">&lt/h2&gt</p>
-          </div>
+      <div class="page-wrapper">
+        <div class="portfolio-nav">
+          <h2>&lth2&gt</h2>
+          <ul>
+            <li><span class="var">var</span><a href="#"> Coding</a></li>
+            <li><span class="var">var</span><a href="#"> Illustration</a></li>
+            <li><span class="var">var</span><a href="#"> Graphic Design</a></li>
+            <li><span class="var">var</span><a href="#"> Electronics</a></li>
+          </ul>
+          <h2>&lt/h2&gt</h2>
         </div>
-        <div id="drawing">
-          <script src="javascript/sketch.js" defer></script>
+        <p class="empty-space">
+          /* Empty Space ... */
+        </p>
+        <div class="highlighted-projects-title">
+          <h2>&lth2&gt</h2>
+          <h1>Highlighted Projects( )</h1>
+          <h2>&lt/h2&gt</h2>
+        </div>
+        <div class="highlighted-projects-gallery">
+            <span class="empty-space">/* Add gallery of "highlighted projects" */</span>
         </div>
       </div>
     </main>
   </body>
-  <!-- <script src="interactivecanvas.js"></script> -->
 </html>
