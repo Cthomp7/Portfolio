@@ -7,6 +7,55 @@
     src: url('../fonts/pixelade-webfont.woff');
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+.hamburger {
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    position: fixed;
+    left: 50vw;
+    display: none;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: 0.5s ease;
+}
+
+.lines {
+    position: relative; 
+}
+
+.lines,
+.lines::before,
+.lines::after {
+    background-color: rgb(255, 220, 24);
+    border-radius: 25px;
+    height: 3px;
+    width: 100%;
+}
+
+.lines::before,
+.lines::after {
+    content: '';
+    position: absolute;
+}
+
+.lines::before {
+    top: -10px;
+}
+
+.lines::after {
+    top: 10px
+}
+
 .nav-controller {
     margin: 0 3rem;
 }
@@ -112,5 +161,16 @@
 
     .star {
         width: 2.7rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .header-text-left, .header-text-right {
+        /* display: none; */
+    }
+
+    .hamburger {
+        display: none;
     }
 }

@@ -10,24 +10,32 @@ let c2;
 let c3;
 
 function setup() {
-  w = 750 / resolution;
   noStroke();
   
   c2 = color (0);
   c3 = color (255, 0);
   backgroundDrawing();
+  //fill('hsb(' + String(Math.round(random(0, 360))) + ', 83%, 28%)');
 }
 
-function draw() {
-    // noStroke();
-    // fill(122, 223, 71);
-    // square (mouseX, mouseY, w);
-}
+$(window).mousemove(function(){ 
+    //fill('hsb(' + String(Math.round(random(0, 360))) + ', 83%, 28%)');
+    //square (mouseX, mouseY, w / 2);
+});
 
 function backgroundDrawing() {
     let width = window.innerWidth;
     let height = window.innerHeight;
-    createCanvas(width, height);
+
+    if (width <= height) {
+        createCanvas(width * 2, height);
+        $(".p5Canvas").css({'min-width' : 'auto','min-height' : '100vh'});
+        width = width * 2;
+    } else {
+        createCanvas(width, height);
+        $(".p5Canvas").css({'min-width' : '100vw','min-height' : ''});
+    }
+
     w = width / resolution;
   
     let sinVal = 0.0;
@@ -58,11 +66,11 @@ function backgroundDrawing() {
     rect(0, 0, width, height);
 }
 
-// $(window).resize(function() {
-//     draw();
-// });
-
 function randomColor() {
     cR = random(0, 255);
     return(cR);
 }
+
+$(window).resize(function() {
+    $(".p5Canvas").css({'min-width' : '','min-height' : '100vh'});
+});

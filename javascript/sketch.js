@@ -1,5 +1,6 @@
 let dots = [];
 let isHover = false;
+let width;
 
 class Particle {
     constructor (x, y, opacity) {
@@ -43,7 +44,7 @@ function setup() {
 
 function draw() {
     //For Website Config
-    let width = window.innerWidth;
+    width = window.innerWidth;
     createCanvas(width, 500);
     background(35);
 
@@ -63,3 +64,10 @@ function draw() {
     }
   //}
 }
+
+$(window).resize(function() {
+  width = window.innerWidth;
+  console.log(width);
+});
+
+//weird issue when I am resizing ###fix!!!!!

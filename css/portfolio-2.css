@@ -23,7 +23,7 @@ body {
 }
 
 .header-text-left, .header-text-right {
-    color: rgb(255, 220, 24);
+    color: rgb(59, 59, 59);
 }
 
 .portfolio-nav {
@@ -32,7 +32,7 @@ body {
 
 h2 {
     font-family: 'Menlo', sans-serif;
-    color: rgb(255, 220, 24);
+    color: rgb(59, 59, 59);
 }
 
 .portfolio-nav li {
@@ -55,8 +55,7 @@ h2 {
 .portfolio-nav li a::after {
     content: '';
     position: absolute;
-    left: 50%; bottom: 0;
-    right: 50%;
+    left: 0; bottom: 0; right: 0;
     height: 5px;
     transition: 0.35s linear;
     border-radius: 25px;
@@ -64,8 +63,8 @@ h2 {
 
 .portfolio-nav li a:hover::after {
     background-color: rgb(241, 108, 60);
-    left: 20;
-    right: 0;
+    left: 20; right: 0;
+    width: 100%;
 }
 
 .portfolio-nav li span {
@@ -78,7 +77,7 @@ h2 {
     margin: 0 auto;
     padding: 2em 0;
     font-family: 'Menlo', sans-serif;
-    color: rgb(255, 220, 24);
+    color: rgb(59, 59, 59);
 }
 
 .highlighted-projects-title {
@@ -121,4 +120,78 @@ h2 {
     z-index: -10;
     min-width: 100vw;
     min-height: 100vh;
+}
+
+@media (max-width: 1154px) {
+
+    .highlighted-projects-title h1, .portfolio-nav li {
+        font-size: 4rem;
+    }
+
+    .highlighted-projects-title h1::before {
+        font-size: 3rem;
+    }
+
+   .portfolio-nav h2, .highlighted-projects-title h2 {
+        font-size: 2rem;
+   }
+
+   .empty-space {
+    font-size: .8rem;
+   }
+}
+
+@media (max-width: 745px) {
+
+    .portfolio-nav {
+        margin-left: 2em;
+    }
+
+    .portfolio-nav, .highlighted-projects-title {
+        margin: 0 4em;
+    }
+
+    .portfolio-nav ul li {
+        padding: 0;
+    }
+
+    .highlighted-projects-title h1, .portfolio-nav li {
+        font-size: 2rem;
+    }
+
+    .portfolio-nav h2, .highlighted-projects-title h2 {
+        font-size: 1rem;
+   }
+
+   .highlighted-projects-title h1::before {
+        font-size: 1.5rem;
+    }  
+
+    .empty-space {
+        font-size: .5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .highlighted-projects-title h1, .portfolio-nav li {
+        font-size: 1.5rem;
+    }
+
+    .portfolio-nav ul {
+        padding-right: 0;
+        padding-left: 1em;
+    }
+
+    .portfolio-nav h2, .highlighted-projects-title h2 {
+        font-size: .8rem;
+    }
+
+    .highlighted-projects-title h1::before {
+        font-size: 1rem;
+    } 
+
+    .portfolio-nav li a::after {
+        height: 2px; 
+    }
+
 }
