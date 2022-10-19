@@ -3,6 +3,20 @@
     src: url('../fonts/Menlo-Regular.ttf');
 }
 
+/* ------- GLOBAL COLORS -------- */
+
+.c-main {
+    color: rgb(128, 217, 237);
+}
+.c-sub-main {
+    color: rgb(68, 139, 155);
+}
+.c-acc {
+    color: rgb(255, 220, 24);
+}
+
+/* ------------------------------ */
+
 body {
     margin: 0;
     padding: 0;
@@ -11,11 +25,11 @@ body {
 }
 
 .navigation ul a li {
-    color: rgb(237, 85, 30);
+    color: rgb(255, 220, 24);
 }
 
 #portfolio {
-    color: rgb(122, 223, 71);
+    color: rgb(128, 217, 237);
 }
 
 #portfolio:hover {
@@ -33,7 +47,7 @@ body {
 .portfolio-nav h1 {
     content: "function";
     font-family: 'Quicksand', sans-serif;
-    color: white;
+    color: rgb(128, 217, 237);
     font-size: 4rem;
     font-weight: 400;
     display: block;
@@ -43,7 +57,7 @@ body {
 .portfolio-nav h1::before {
     content: "function";
     font-family: 'Menlo', sans-serif;
-    color: rgb(241, 108, 60);
+    color: rgb(68, 139, 155);
     font-size: 2.5rem;
     display: block;
     margin: 0 -1em;
@@ -84,7 +98,7 @@ h2 {
 
 .portfolio-nav li a:hover {
     transition: 0.35s linear;
-    color: rgb(241, 108, 60);
+    color: rgb(128, 217, 237);
 }
 
 .portfolio-nav li a::after {
@@ -97,7 +111,7 @@ h2 {
 }
 
 .portfolio-nav li a:hover::after {
-    background-color: rgb(241, 108, 60);
+    background-color: rgb(128, 217, 237);
     left: 20; right: 0;
     width: 100%;
 }
@@ -130,7 +144,7 @@ h2 {
 .highlighted-projects h1::before {
     content: "function";
     font-family: 'Menlo', sans-serif;
-    color: rgb(241, 108, 60);
+    color: rgb(68, 139, 155);
     font-size: 2.5rem;
     display: block;
     margin: 0 -1em;
@@ -209,6 +223,10 @@ h2 {
 
     .highlighted-projects h1, .portfolio-nav li, .portfolio-nav h1 {
         font-size: 3rem;
+    }
+
+    .portfolio-nav li a::after {
+        height: 3px; 
     }
 
     .portfolio-nav h2, .highlighted-projects h2 {
