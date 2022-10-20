@@ -1,3 +1,7 @@
+//JavaScript Library for Jumbling Text
+//by Chloe Thompson | chloe.thomp7@gmail.com
+
+
 let timeout;
 
 for (let i = 0; i < $('.jumble').length; i++) {
