@@ -47,7 +47,7 @@ body {
 .portfolio-nav h1 {
     content: "function";
     font-family: 'Quicksand', sans-serif;
-    color: rgb(128, 217, 237);
+    color: white;
     font-size: 4rem;
     font-weight: 400;
     display: block;
@@ -76,6 +76,12 @@ body {
     color: rgb(59, 59, 59);
     font-size: 2rem;
     margin: 0 2em;
+}
+
+.semi {
+    font-family: 'Menlo', sans-serif;
+    font-size: 3rem;
+    color: rgb(59, 59, 59);
 }
 
 h2 {
@@ -114,10 +120,6 @@ h2 {
     background-color: rgb(128, 217, 237);
     left: 20; right: 0;
     width: 100%;
-}
-
-.portfolio-nav li span {
-    color: rgb(255, 220, 24);
 }
 
 .empty-space {
@@ -242,7 +244,9 @@ h2 {
         font-size: .5rem;
     }
 
-
+    .semi {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 670px) {
@@ -254,7 +258,7 @@ h2 {
 @media (max-width: 530px) {
 
     .portfolio-nav {
-        margin: 0 1.5em;
+        margin: 0 1em;
     }
 
 
@@ -281,6 +285,10 @@ h2 {
 
     .highlighted-projects {
         margin: 1em 2em;
+    }
+
+    .semi {
+        font-size: 1.5rem;
     }
 
 }
