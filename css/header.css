@@ -175,12 +175,6 @@ body {
     }
 }
 
-@media (min-width: 500px) {
-    .nav-controller {
-        display: initial;
-    }
-}
-
 @media (max-width: 500px) {
 
     .header-text-left, .header-text-right {

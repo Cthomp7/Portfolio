@@ -1,6 +1,10 @@
-//JavaScript Library for Jumbling Text
+//Jumble Text
 //by Chloe Thompson | chloe.thomp7@gmail.com
+//JavaScript library for jumbling text
 
+//---- How to ----
+//  Add jumble class to a text element you want to jumble
+//  ex: <p class"jumble"">text</p>
 
 let timeout;
 

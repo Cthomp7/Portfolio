@@ -268,7 +268,7 @@ h2 {
 
     .portfolio-nav ul {
         padding-right: 0;
-        padding-left: 2em;
+        padding-left: 1em;
     }
 
     .portfolio-nav h2, .highlighted-projects h2 {
@@ -291,10 +291,4 @@ h2 {
         font-size: 1.5rem;
     }
 
-}
-
-@media (max-width: 500px) {
-    .nav-controller {
-        /* background-color: black; */
-    }
 }
