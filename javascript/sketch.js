@@ -1,6 +1,21 @@
 let dots = [];
 let isHover = false;
 let width;
+let rColor;
+
+$(document).ready( function () {
+  $('#defaultCanvas0').css({
+    'position': 'absolute', 
+    'z-index': '-2', 
+    'top': '56', 
+    'left': '0'});
+});
+
+$('#intro').mouseenter(function() { isHover = true;
+});
+
+$('#intro').mouseleave(function() { isHover = false;
+});
 
 class Particle {
   constructor (x, y) {
@@ -9,7 +24,6 @@ class Particle {
     this.life = 100;
 
     this.dying = function(){
-
     }
   }
 }
@@ -19,26 +33,18 @@ function setup() {
   noStroke();
   let c;
   c = random(0, 360);
-  let rColor = Math.round(c).toString();
-  fill('hsba(' + rColor + ', 100%, 90%, 0.8)');
-  fill(255, 31, 94, 70);
-
+  rColor = Math.round(c).toString();
   width = window.innerWidth;
   createCanvas(width, 500);
+  fill('hsba(' + rColor + ', 100%, 90%, 0.8)');
 }
-
-$('#intro').mouseenter(function() { isHover = true;
-});
-
-$('#intro').mouseleave(function() { isHover = false;
-});
 
 function draw() {
   width = window.innerWidth;
   createCanvas(width, 500);
-    //For Website Config
-    background(35);
-    //For Drawing Config
+  background(35);
+  fill('hsba(' + rColor + ', 100%, 90%, 0.8)');
+
   if (isHover == true){
     let p = new Particle (mouseX, mouseY);
     dots.push(p);
@@ -49,7 +55,7 @@ function draw() {
   }
 
   if (dots.length > 0) {
-    dots[0].life -= 80;
+    dots[0].life -= 50;
 
     if (dots[0].life <= 0) {
       dots.shift();

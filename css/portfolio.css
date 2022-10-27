@@ -5,14 +5,11 @@
 
 /* ------- GLOBAL COLORS -------- */
 
-.c-main {
-    color: rgb(128, 217, 237);
-}
-.c-sub-main {
-    color: rgb(68, 139, 155);
-}
 .c-acc {
     color: rgb(255, 220, 24);
+}
+.code-grey {
+    color: rgb(93, 93, 93);
 }
 
 /* ------------------------------ */
@@ -24,20 +21,12 @@ body {
     background-color: rgb(27, 27, 27);
 }
 
-.navigation ul a li {
-    color: rgb(255, 220, 24);
-}
-
 #portfolio {
-    color: rgb(128, 217, 237);
+    color: rgb(200, 200, 200);
 }
 
 #portfolio:hover {
     color: white;
-}
-
-.header-text-left, .header-text-right {
-    color: rgb(59, 59, 59);
 }
 
 .portfolio-nav {
@@ -57,7 +46,7 @@ body {
 .portfolio-nav h1::before {
     content: "function";
     font-family: 'Menlo', sans-serif;
-    color: rgb(68, 139, 155);
+    color: rgb(255, 220, 24);
     font-size: 2.5rem;
     display: block;
     margin: 0 -1em;
@@ -104,7 +93,7 @@ h2 {
 
 .portfolio-nav li a:hover {
     transition: 0.35s linear;
-    color: rgb(128, 217, 237);
+    color: rgb(255, 220, 24);
 }
 
 .portfolio-nav li a::after {
@@ -117,7 +106,7 @@ h2 {
 }
 
 .portfolio-nav li a:hover::after {
-    background-color: rgb(128, 217, 237);
+    background-color: rgb(255, 220, 24);
     left: 20; right: 0;
     width: 100%;
 }
@@ -146,7 +135,7 @@ h2 {
 .highlighted-projects h1::before {
     content: "function";
     font-family: 'Menlo', sans-serif;
-    color: rgb(68, 139, 155);
+    color: rgb(255, 220, 24);
     font-size: 2.5rem;
     display: block;
     margin: 0 -1em;
@@ -160,18 +149,6 @@ h2 {
     padding: 0 0.5em;
 }
 
-.highlighted-projects-gallery {
-    display: flex;
-    margin: 0 auto;
-}
-
-.temp-photo {
-    width: 40%;
-    height: 20em;
-    margin: 1em auto;
-    background-color: white;
-}
-
 .p5Canvas {
     position: fixed;
     top: 0;
@@ -179,6 +156,48 @@ h2 {
     z-index: -10;
     min-width: 100vw;
     min-height: 100vh;
+}
+
+.highlighted-projects-gallery {
+    display: flex;
+    margin: 4em auto;
+}
+
+.project-square {
+    margin: 0 auto;
+    padding: 0;
+    border: 2px solid white;
+    min-width: 25em;
+    min-height: 25em;
+}
+
+.project-square-contents {
+    margin: 0.4em 0.5em;
+}
+
+.project-title {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.project-description {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0;
+}
+
+.project-square:hover {
+    border: 2px solid rgb(255, 220, 24);
+}
+
+.project-square:hover .project-title, .project-square:hover .project-description {
+    color: rgb(255, 220, 24);
 }
 
 @media (max-width: 1154px) {

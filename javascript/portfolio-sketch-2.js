@@ -62,7 +62,7 @@ function backgroundDrawing() {
         }
     }
 
-    fill(15, 230);
+    fill(15, 240);
     rect(0, 0, width, height);
 }
 

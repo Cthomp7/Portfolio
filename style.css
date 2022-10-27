@@ -7,25 +7,34 @@
     src: url('fonts/pixelade-webfont.woff');
 }
 
+#about {
+    color: rgb(200, 200, 200);
+}
+
+#about:hover {
+    color: white;
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(58, 58, 58);
+    background-color: rgb(29, 29, 29);
 }
 
 .title {
     color: white;
     font-family: 'Quicksand', sans-serif;
     font-weight: 100;
-    font-size: 4rem;
+    font-size: 5rem;
     margin: 0 0;
     padding: 0;
 }
 
 .sub-title {
-    font-family: 'Menlo', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 200;
+    font-size: 2.5rem;
     color: rgb(144, 144, 144);
     margin: .3rem 0;
     padding: 0 0;
@@ -44,11 +53,9 @@ body {
 }
 
 #intro {
-    /* display: flex; */
-    position: absolute;
     width: 100%;
     height: 500px;
-    z-index: 100;
+    /* position: absolute; */
 }
 
 #sub-intro {
@@ -61,4 +68,38 @@ body {
 
 #sub-intro-col-2 {
     margin: 1rem 0;
+}
+
+.content-box {
+    margin: 2em;
+}
+
+.content-box {
+    margin-left: auto;
+    padding: 0;
+    border: 2px solid white;
+    width: 50vw;
+    z-index: -1;
+}
+
+.content-box-title {
+    margin-bottom: 3em;
+}
+
+.content-box-title h2 {
+    background-color: white;
+    padding: 0.5em;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    position: relative;
+    top: 0.5em; left: -1em;
+    max-width: 50%;
+}
+
+.content-box p {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    margin: 1.5em;
 }
