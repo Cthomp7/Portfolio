@@ -80,6 +80,8 @@ body {
     border: 2px solid white;
     width: 50vw;
     z-index: -1;
+    animation-duration: 4s;
+    opacity: 0;
 }
 
 .content-box-title {
@@ -96,10 +98,32 @@ body {
     position: relative;
     top: 0.5em; left: -1em;
     max-width: 50%;
+    animation-duration: 2s;
+    opacity: 0;
 }
 
 .content-box p {
     color: white;
     font-family: 'Quicksand', sans-serif;
     margin: 1.5em;
+}
+
+@keyframes content-box-title_right {
+    from {left: -50vw; opacity: 0%;};
+    to {left: -1em; opacity: 100%;};
+}
+
+@keyframes content-box-title_right_out {
+    from {left: -1em; opacity: 100%;};
+    to {left: -50vw; opacity: 0%;};
+}
+
+@keyframes content-box_left {
+    from {opacity: 0%;};
+    to {opacity: 100%;};
+}
+
+@keyframes content-box_left_out {
+    from {opacity: 100%;};
+    to {opacity: 0%;};
 }

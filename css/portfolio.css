@@ -204,6 +204,7 @@ h2 {
 
     .highlighted-projects h1, .portfolio-nav li  {
         font-size: 4rem;
+        width: 100vw;
     }
 
     .portfolio-nav h1 {
