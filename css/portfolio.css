@@ -1,24 +1,8 @@
-@font-face {
-    font-family: 'Menlo';
-    src: url('../fonts/Menlo-Regular.ttf');
-}
-
-/* ------- GLOBAL COLORS -------- */
-
 .c-acc {
     color: rgb(255, 220, 24);
 }
 .code-grey {
     color: rgb(93, 93, 93);
-}
-
-/* ------------------------------ */
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: rgb(27, 27, 27);
 }
 
 #portfolio {

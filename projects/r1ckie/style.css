@@ -1,0 +1,6 @@
+#t-text::after {
+    content: "Robot 1 Carboard Kinetically Illustrates Efficiently";
+    display: block;
+    color: var(--clr-code);
+    font-size: .2em;
+}

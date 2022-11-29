@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Menlo';
+    src: url('../fonts/Menlo-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Pixelade';
+    src: url('../fonts/pixelade-webfont.woff');
+}

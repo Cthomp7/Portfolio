@@ -1,20 +1,3 @@
-@font-face {
-    font-family: 'Menlo';
-    src: url('fonts/Menlo-Regular.ttf');
-}
-@font-face {
-    font-family: 'Pixelade';
-    src: url('fonts/pixelade-webfont.woff');
-}
-
-#about {
-    color: rgb(200, 200, 200);
-}
-
-#about:hover {
-    color: white;
-}
-
 body {
     margin: 0;
     padding: 0;

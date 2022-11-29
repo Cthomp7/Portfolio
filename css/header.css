@@ -1,18 +1,3 @@
-@font-face {
-    font-family: 'Menlo';
-    src: url('../fonts/Menlo-Regular.ttf');
-}
-@font-face {
-    font-family: 'Pixelade';
-    src: url('../fonts/pixelade-webfont.woff');
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* ------- HAMBURGER -------- */
  
 .hamburger {
@@ -214,4 +199,8 @@ body {
         top: -1.2em;
         width: 4rem;
     }
+}
+
+.target {
+    color: rgb(200, 200, 200) !important;
 }

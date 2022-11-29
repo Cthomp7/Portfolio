@@ -8,32 +8,35 @@ let doc = document.location.pathname;
 console.log(doc);
 
 $(document).ready(function() {
+    $('head').append('<link rel="stylesheet" href="/css/fonts.css"/>');
+    $('head').append('<link rel="stylesheet" href="/css/site.css"/>');
     $('header').load('/header.html');
     $('head').append('<link rel="stylesheet" href="/css/header.css"/>');
-    $('head').append('<link rel="preconnect" href="https://fonts.googleapis.com" />', '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />', '<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"/>');
 
     //********** FIX ************ 
     //if statements are triggered correctly
     //css rules are not being applied
-    if (doc.includes("index") == true) {
-        $('#about').css({'color': 'white'});
-    } else if (doc.includes("portfolio") == true) {
+    if (doc.includes("about") == true) {
+        $('#about').addClass('target');
+        let about = document.getElementById("about");
+        about.style.color = "rgb(200, 200, 200) !important;";
+        //something fucked up with the id's on the li elements
+        console.log("You are in the about section");
+    } else if (doc.includes("portfolio") == true || doc.includes("projects") == true) {
         $('#portfolio').css({'color': 'rgb(200, 200, 200)'});
+        console.log("You are in the portfolio section");
     } else if (doc.includes("experience") == true) {
         $('#experience').css({'color': 'rgb(200, 200, 200) !important'});
+        console.log("You are in the experience section");
     } else if (doc.includes("contact") == true) {
         $('#contact').css({'color': 'rgb(200, 200, 200) !important'});
+        console.log("You are in the contact section");
     }
 });
 
-$('#portfolio').hover(function() {
-    $('#portfolio').css({'color': 'white'});
-});
-
-let clicked = false;
+let clicked = true;
 
 $(window).resize(function() {
-    console.log("triggered");
     if ($('body').width() >= 500) {
         $('.nav-controller').css("display", "block");
     } else {
