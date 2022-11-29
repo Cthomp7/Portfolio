@@ -8,10 +8,10 @@ let doc = document.location.pathname;
 console.log(doc);
 
 $(document).ready(function() {
-    $('head').append('<link rel="stylesheet" href="/css/fonts.css"/>');
-    $('head').append('<link rel="stylesheet" href="/css/site.css"/>');
-    $('header').load('/header.html');
-    $('head').append('<link rel="stylesheet" href="/css/header.css"/>');
+    $('head').append('<link rel="stylesheet" href="Portfolio/css/fonts.css"/>');
+    $('head').append('<link rel="stylesheet" href="Portfolio/css/site.css"/>');
+    $('header').load('Portfolio/header.html');
+    $('head').append('<link rel="stylesheet" href="Portfolio/css/header.css"/>');
 
     //********** FIX ************ 
     //if statements are triggered correctly
