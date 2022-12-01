@@ -1,10 +1,35 @@
+body {
+    background-color: rgb(254, 254, 254);
+}
+
+header {
+    background-color: rgb(212, 212, 212);
+}
+
+.navigation {
+    background-color: rgb(255, 250, 237);
+}
+
+.navigation a {
+    color: var(--clr-code);
+}
+
+.navigation a:hover {
+    color: var(--clr-secondary) !important;
+}
+
+nav::before, nav::after {
+    color: var(--clr-secondary);
+}
+
 h1 {
     font-weight: 100;
+    font-size: 3rem;
     text-align: center;
-    color: white;
+    color: var(--clr-code);
+    margin-bottom: 1.1em;
 }
 
 .photo {
-    /* background-position: 20%; */
-    background-size: 500%;
+    background-size: 150%;
 }

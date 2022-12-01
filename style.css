@@ -110,3 +110,10 @@ body {
     from {opacity: 100%;};
     to {opacity: 0%;};
 }
+
+#defaultCanvas0 {
+    position: absolute; 
+    z-index: -2; 
+    top: 56; 
+    left: 0;
+}

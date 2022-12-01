@@ -5,10 +5,6 @@
     color: rgb(93, 93, 93);
 }
 
-#portfolio {
-    color: rgb(200, 200, 200);
-}
-
 #portfolio:hover {
     color: white;
 }

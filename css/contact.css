@@ -5,10 +5,6 @@ body {
     box-sizing: border-box;
 }
 
-#contact {
-    color: rgb(200, 200, 200);
-}
-
 #contact:hover {
     color: white;
 }

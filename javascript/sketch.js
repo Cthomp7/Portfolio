@@ -3,19 +3,9 @@ let isHover = false;
 let width;
 let rColor;
 
-$(document).ready( function () {
-  $('#defaultCanvas0').css({
-    'position': 'absolute', 
-    'z-index': '-2', 
-    'top': '56', 
-    'left': '0'});
-});
-
-$('#intro').mouseenter(function() { isHover = true;
-});
-
-$('#intro').mouseleave(function() { isHover = false;
-});
+$('#intro').mouseenter(function() { isHover = true; });
+$('#intro').mouseleave(function() { isHover = false; });
+$('#intro').mousemove(function() { isMoving = true; });
 
 class Particle {
   constructor (x, y) {
@@ -45,9 +35,10 @@ function draw() {
   background(35);
   fill('hsba(' + rColor + ', 100%, 90%, 0.8)');
 
-  if (isHover == true){
-    let p = new Particle (mouseX, mouseY);
-    dots.push(p);
+  if (isHover == true && isMoving == true) {
+      let p = new Particle (mouseX, mouseY);
+      dots.push(p);
+      isMoving = false;
   }
 
   for (let i = 0; i < dots.length; i++) {

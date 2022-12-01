@@ -1,45 +1,47 @@
 let doc = document.location.pathname;
 console.log(doc);
 
-$(document).ready(function() {
-    $('head').append(`<link rel="stylesheet" href="/css/fonts.css"/>`);
-    $('head').append(`<link rel="stylesheet" href="/css/site.css"/>`);
-    $('header').load(`/header.html`);
-    $('head').append(`<link rel="stylesheet" href="/css/header.css"/>`);
+fetch('/header.html').then(response => {
+    return response.text();
+  }).then(header => {
+    document.body.insertAdjacentHTML("afterbegin", header);
+    headerSpawned();
+});
 
-    if (doc.includes("about") == true) {
-        $('#about').addClass('target');
-        let about = document.getElementById("about");
-        about.style.color = "rgb(200, 200, 200) !important;";
-        console.log("You are in the about section");
-    } else if (doc.includes("portfolio") == true || doc.includes("projects") == true) {
+$('head').append(`<link rel="stylesheet" href="/css/fonts.css"/>`);
+$('head').append(`<link rel="stylesheet" href="/css/site.css"/>`);
+$('head').append(`<link rel="stylesheet" href="/css/header.css"/>`);
+
+function headerSpawned() {
+    let clicked = false;
+
+    if (doc == '/index.html') {
+        $('#about').css({'color': 'rgb(200, 200, 200)'});
+    } else if (doc.includes("portfolio") == true || 
+        doc.includes("galleries") == true) {
         $('#portfolio').css({'color': 'rgb(200, 200, 200)'});
-        console.log("You are in the portfolio section");
     } else if (doc.includes("experience") == true) {
-        $('#experience').css({'color': 'rgb(200, 200, 200) !important'});
-        console.log("You are in the experience section");
+        $('#experience').css({'color': 'rgb(200, 200, 200)'});
     } else if (doc.includes("contact") == true) {
-        $('#contact').css({'color': 'rgb(200, 200, 200) !important'});
-        console.log("You are in the contact section");
+        $('#contact').css({'color': 'rgb(200, 200, 200)'});
     }
-});
 
-let clicked = true;
+    $(window).resize(function() {
+        if ($('body').width() >= 550) {
+            $('.navigation').css("display", "flex");
+        } else {
+            $('.navigation').css("display", "none");
+        }
+    });
 
-$(window).resize(function() {
-    if ($('body').width() >= 500) {
-        $('.nav-controller').css("display", "block");
-    } else {
-        $('.nav-controller').css("display", "none");
-    }
-});
-
-$('.hamburger').click(function(){
-    if (clicked == false) {
-        $('.nav-controller').css("display", "block");
-        clicked = true;
-    } else {
-        $('.nav-controller').css("display", "none");
-        clicked = false;
-    }
-});
+    $('.hamburger').click(function(){
+        console.log("triggered");
+        if (clicked == false) {
+            $('.navigation').css("display", "block");
+            clicked = true;
+        } else {
+            $('.navigation').css("display", "none");
+            clicked = false;
+        }
+    });
+}
