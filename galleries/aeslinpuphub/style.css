@@ -2,5 +2,9 @@ h1 {
     font-weight: 100;
     text-align: center;
     color: white;
-    
+}
+
+.photo {
+    /* background-position: 20%; */
+    background-size: 500%;
 }

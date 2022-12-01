@@ -101,7 +101,6 @@ a {
   width: 100%;
 }
 
-
 #caption {
   margin: auto;
   display: block;
@@ -112,7 +111,6 @@ a {
   padding: 10px 0;
   height: 150px;
 }
-
 
 .modal-content, #caption {  
   animation-name: zoom;
