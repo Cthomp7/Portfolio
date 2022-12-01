@@ -15,7 +15,7 @@ $('head').append(`<link rel="stylesheet" href="/css/header.css"/>`);
 function headerSpawned() {
     let clicked = false;
 
-    if (doc == '/index.html') {
+    if (doc == '/index.html' || doc == '/') {
         $('#about').css({'color': 'rgb(200, 200, 200)'});
     } else if (doc.includes("portfolio") == true || 
         doc.includes("galleries") == true) {
