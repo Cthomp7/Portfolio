@@ -43,12 +43,6 @@
     top: 10px
 }
 
-@media (max-width: 550px) {
-    .hamburger {
-        display: block;
-    }
-}
-
 /* ------------------------------ */
 
 .navigation {
@@ -107,4 +101,20 @@ nav::after {
     font-size: .7rem;
     color: var(--clr-code);
     margin: auto 0;
+}
+
+@media (max-width: 550px) {
+    .hamburger {
+        display: block;
+    }
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav a {
+        font-size: 5vmin;
+    }
+    nav::before, nav::after {
+        display: none;
+    }
 }

@@ -1,0 +1,51 @@
+.doc {
+    /* display: flex;
+    align-items: center; */
+}
+
+.doc-col {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 1em;
+}
+
+.doc-row {
+    flex-direction: row;
+}
+
+.doc-img {
+    max-height: 500px;
+}
+
+.arrow {
+    max-width: 20px;
+    /* height: fit-content; */
+    padding: 1em;
+    /* margin: .5em; */
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255, .2);
+    cursor: pointer;
+}
+
+.u, .d {
+    max-width: 15px;
+    padding: .75em;
+    display: flex;
+    margin: 1em auto;
+}
+
+.r {
+    transform: scaleX(-1);
+}
+.u {
+    transform: rotate(90deg);
+}
+.d {
+    transform: rotate(-90deg);
+}
+
+@keyframes doc-left {
+    from {left: 0};
+    to {left: -50px};
+}

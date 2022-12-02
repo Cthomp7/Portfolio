@@ -15,6 +15,7 @@ $('head').append(`<link rel="stylesheet" href="/css/header.css"/>`);
 function headerSpawned() {
     let clicked = false;
 
+    //TODO Update if statements to include galleries and projects
     if (doc == '/index.html' || doc == '/') {
         $('#about').css({'color': 'rgb(200, 200, 200)'});
     } else if (doc.includes("portfolio") == true || 
@@ -37,7 +38,7 @@ function headerSpawned() {
     $('.hamburger').click(function(){
         console.log("triggered");
         if (clicked == false) {
-            $('.navigation').css("display", "block");
+            $('.navigation').css("display", "flex");
             clicked = true;
         } else {
             $('.navigation').css("display", "none");
