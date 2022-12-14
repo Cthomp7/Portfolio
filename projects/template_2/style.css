@@ -1,6 +1,6 @@
 .doc {
-    /* display: flex;
-    align-items: center; */
+    display: flex;
+    justify-content: center;
 }
 
 .doc-col {

@@ -6,6 +6,8 @@ $(window).scroll(function() {
       $('.content-box-title h2').css({
         'animation-name': 'content-box-title_right', 
         'opacity': '100'});
+      $('.content').css({'animation-name': 'content-box_left', 
+      'opacity': '100'});
     }
     if ($(window).scrollTop() > 100) {
         // $('.content-box').css({
@@ -16,3 +18,15 @@ $(window).scroll(function() {
         // 'opacity': '0'});
     }
   });
+
+let names = ["Chloe", "MlgChloe", "Chlobotic", "Chloboswag", "Clob"];
+let i = 0;
+changeName();
+
+function changeName() {
+  if (i >= 5) {
+    i = 0;
+  }
+  i++;
+  setTimeout(changeName, 3000);
+}

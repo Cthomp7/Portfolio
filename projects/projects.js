@@ -37,6 +37,10 @@ $('.arrow').click(function() {
     }
 });
 
+// keep track of element positions separately
+let currentPositions = [0, 0, 0]
+let currentRowPosition = 2;
+
 // TODO pages attribute 
 function documentFlip(doc_col, d) { //doc_col = $(.doc-col) of doc
     let doc_img = doc_col.find('.doc-img'); //all doc_img(s)

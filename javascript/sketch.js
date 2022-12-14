@@ -1,6 +1,6 @@
 let dots = [];
 let isHover = false;
-let width;
+let width, height = 500;
 let rColor;
 
 $('#intro').mouseenter(function() { isHover = true; });
@@ -31,7 +31,7 @@ function setup() {
 
 function draw() {
   width = window.innerWidth;
-  createCanvas(width, 500);
+  createCanvas(width, height);
   background(35);
   fill('hsba(' + rColor + ', 100%, 90%, 0.8)');
 
@@ -53,3 +53,15 @@ function draw() {
     }
   }
 }
+
+$(window).resize(function() {
+  if ($(window).width() <= 500) {
+    height = 280;
+  } else if ($(window).width() <= 600) {
+    height = 300;
+  } else if ($(window).width() <= 700) {
+    height = 400;
+  } else {
+    height = 500;
+  }
+});

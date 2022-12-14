@@ -9,7 +9,7 @@ body {
     color: white;
     font-family: 'Quicksand', sans-serif;
     font-weight: 100;
-    font-size: 5rem;
+    font-size: 10vmin;
     margin: 0 0;
     padding: 0;
 }
@@ -17,7 +17,7 @@ body {
 .sub-title {
     font-family: 'Quicksand', sans-serif;
     font-weight: 200;
-    font-size: 2.5rem;
+    font-size: 5vmin;
     color: rgb(144, 144, 144);
     margin: .3rem 0;
     padding: 0 0;
@@ -36,35 +36,44 @@ body {
 }
 
 #intro {
-    width: 100%;
-    height: 500px;
-    /* position: absolute; */
+    height: 60vmin;
 }
 
 #sub-intro {
     position: relative;
-    top: 10em;
-    left: 9rem;
-    margin: 0;
-    padding: 0;
+    top: 20vmin;
+    left: 15vmin;
 }
 
 #sub-intro-col-2 {
     margin: 1rem 0;
 }
 
-.content-box {
-    margin: 2em;
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    gap: 3em;
+    justify-content: space-between;
+    margin: 5vmin;
+    height: 60vh;
+    animation-duration: 2s;
+    opacity: 0;
+}
+
+.content img {
+    margin: auto 0;
+    width: 100%;
+    transform: scale(.9);
 }
 
 .content-box {
-    margin-left: auto;
+    margin: 2em auto;
     padding: 0;
     border: 2px solid white;
-    width: 50vw;
     z-index: -1;
     animation-duration: 4s;
     opacity: 0;
+    max-width: 478px;
 }
 
 .content-box-title {
@@ -76,11 +85,11 @@ body {
     padding: 0.5em;
     margin: 0;
     font-family: 'Quicksand', sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 300;
     position: relative;
     top: 0.5em; left: -1em;
-    max-width: 50%;
+    max-width: 70%;
     animation-duration: 2s;
     opacity: 0;
 }
@@ -89,6 +98,33 @@ body {
     color: white;
     font-family: 'Quicksand', sans-serif;
     margin: 1.5em;
+}
+
+@media (max-width: 790px) {
+    .content img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .content-box-title h2 {
+        font-size: 2rem;
+        top: 0.7em;
+    }
+
+    .content-box p {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .content img {
+        width: 100%;
+        margin: 0;
+    }
+    .content-box-title h2 {
+        font-size: 1.5rem;
+        top: 1em;
+    }
 }
 
 @keyframes content-box-title_right {
@@ -111,9 +147,15 @@ body {
     to {opacity: 0%;};
 }
 
+@keyframes name-animation {
+    from {left: -1em; opacity: 100%;};
+    to {left: -50vw; opacity: 0%;};
+}
+
 #defaultCanvas0 {
     position: absolute; 
     z-index: -2; 
     top: 56; 
     left: 0;
+    height: 60vmin;
 }
