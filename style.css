@@ -153,6 +153,11 @@ body {
     overflow: hidden;
     z-index: -10;
     opacity: .3;
+    transition: 2s;
+}
+
+.port-item:hover .port-item-bkg {
+    background-size: 300% !important;
 }
 
 @media (max-width: 1070px) {

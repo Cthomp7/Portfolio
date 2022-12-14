@@ -130,12 +130,11 @@ h2 {
 }
 
 .p5Canvas {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: -10;
-    min-width: 100vw;
-    min-height: 100vh;
+    position: fixed; 
+    z-index: -2; 
+    top: 0; 
+    left: 0;
+    width: 100vw !important;
 }
 
 .highlighted-projects-gallery {

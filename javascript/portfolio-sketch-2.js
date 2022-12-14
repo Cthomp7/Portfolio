@@ -24,17 +24,17 @@ $(window).mousemove(function(){
 });
 
 function backgroundDrawing() {
-    let width = window.innerWidth;
-    let height = window.innerHeight;
-
-    if (width <= height) {
-        createCanvas(width * 2, height);
-        $(".p5Canvas").css({'min-width' : 'auto','min-height' : '100vh'});
-        width = width * 2;
-    } else {
-        createCanvas(width, height);
-        $(".p5Canvas").css({'min-width' : '100vw','min-height' : ''});
-    }
+    let width = $(window).width();
+    let height = $(window).height();
+    createCanvas(width, height);
+    // if (width <= height) {
+    //     createCanvas(width * 2, height);
+    //     $(".p5Canvas").css({'min-width' : 'auto','min-height' : '100vh'});
+    //     //width = width * 2;
+    // } else {
+    //     createCanvas(width, height);
+    //     $(".p5Canvas").css({'min-width' : '100vw','min-height' : ''});
+    // }
 
     w = width / resolution;
   
@@ -71,6 +71,6 @@ function randomColor() {
     return(cR);
 }
 
-$(window).resize(function() {
-    $(".p5Canvas").css({'min-width' : '','min-height' : '100vh'});
-});
+// $(window).resize(function() {
+//     $(".p5Canvas").css({'min-width' : '','min-height' : '100vh'});
+// });
