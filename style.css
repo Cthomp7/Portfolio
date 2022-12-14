@@ -51,7 +51,7 @@ body {
 
 .content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 4em;
     max-width: 1000px;
     margin: 5vmin auto;
@@ -127,7 +127,6 @@ body {
 .port-con-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
     margin: 1em;
 }
 
@@ -162,7 +161,19 @@ body {
     }
 }
 
+@media (max-width: 868px) {
+    .content img {
+        width: 75%;
+    }
+    .arrow {
+        max-width: 15px;
+    }
+}
+
 @media (max-width: 790px) {
+    .content {
+        gap: 0;
+    }
     .content-box {
         margin: 2em auto;
     }
@@ -179,9 +190,6 @@ body {
 }
 
 @media (max-width: 600px) {
-    .content {
-        gap: 0;
-    }
     .content img {
         width: 100%;
         margin: 0;
