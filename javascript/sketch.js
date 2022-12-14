@@ -55,8 +55,10 @@ function draw() {
 }
 
 $(window).resize(function() {
-  if ($(window).width() <= 500) {
-    height = 280;
+  if ($(window).width() <= 400) {
+    height = 220;
+  } else if ($(window).width() <= 500) {
+    height = 270;
   } else if ($(window).width() <= 600) {
     height = 300;
   } else if ($(window).width() <= 700) {

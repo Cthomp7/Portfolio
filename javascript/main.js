@@ -39,9 +39,11 @@ function headerSpawned() {
         console.log("triggered");
         if (clicked == false) {
             $('.navigation').css("display", "flex");
+            $('.nav-bkg').css("opacity", "1");
             clicked = true;
         } else {
             $('.navigation').css("display", "none");
+            $('.nav-bkg').css("opacity", "0");
             clicked = false;
         }
     });
