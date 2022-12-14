@@ -2,11 +2,11 @@ body {
     background-color: rgb(254, 254, 254);
 }
 
-header {
-    background-color: rgb(212, 212, 212);
+.navigation {
+    background-color: var(--clr-background);
 }
 
-.navigation {
+/* .navigation {
     background-color: rgb(255, 250, 237);
 }
 
@@ -20,7 +20,7 @@ header {
 
 nav::before, nav::after {
     color: var(--clr-secondary);
-}
+} */
 
 h1 {
     font-weight: 100;
