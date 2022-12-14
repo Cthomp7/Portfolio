@@ -24,13 +24,13 @@ function setup() {
   let c;
   c = random(0, 360);
   rColor = Math.round(c).toString();
-  width = window.innerWidth;
+  width = $(window).width();
   createCanvas(width, 500);
   fill('hsba(' + rColor + ', 100%, 90%, 0.8)');
 }
 
 function draw() {
-  width = window.innerWidth;
+  width = $(window).width();
   createCanvas(width, height);
   background(35);
   fill('hsba(' + rColor + ', 100%, 90%, 0.8)');

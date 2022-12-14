@@ -27,9 +27,14 @@ function headerSpawned() {
         $('#contact').css({'color': 'rgb(200, 200, 200)'});
     }
 
+    if ($('body').width() <= 550) {
+        $('.navigation').css("display", "none");
+    }
+
     $(window).resize(function() {
         if ($('body').width() >= 550) {
             $('.navigation').css("display", "flex");
+            $('.nav-bkg').css("opacity", "0");
         } else {
             $('.navigation').css("display", "none");
         }
