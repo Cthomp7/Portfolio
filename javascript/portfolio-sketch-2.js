@@ -1,4 +1,5 @@
 let resolution = 30;
+let w;
 let c;
 let n;
 
@@ -25,18 +26,17 @@ $(window).mousemove(function(){
 function backgroundDrawing() {
     let width = $(window).width();
     let height = $(window).height();
-    createCanvas(width, height);
-    // if (width <= height) {
-    //     createCanvas(width * 2, height);
-    //     $(".p5Canvas").css({'min-width' : 'auto','min-height' : '100vh'});
-    //     //width = width * 2;
-    // } else {
-    //     createCanvas(width, height);
-    //     $(".p5Canvas").css({'min-width' : '100vw','min-height' : ''});
-    // }
 
-    let w = width / resolution;
-    let h = height / resolution;
+    if (width <= height) {
+        createCanvas(width * 2, height);
+        $(".p5Canvas").css({'min-width' : 'auto','min-height' : '100vh'});
+        //width = width * 2;
+    } else {
+        createCanvas(width, height);
+        $(".p5Canvas").css({'min-width' : '100vw','min-height' : ''});
+    }
+
+    w = width / resolution;
   
     let sinVal = 0.0;
     let sinInc = TWO_PI / 25.0;
@@ -56,7 +56,7 @@ function backgroundDrawing() {
         }
         
         fill(c);
-        rect(x * w, y * h, w, h);
+        square (x * w, y * w, w);
         
         sinVal = sinVal + sinInc;
         }
@@ -72,5 +72,5 @@ function randomColor() {
 }
 
 // $(window).resize(function() {
-//     $(".p5Canvas").css({'min-width' : '','min-height' : '100vh'});
+//     $(".p5Canvas").css({'min-width' : '100vw','min-height' : '100vh'});
 // });
