@@ -131,9 +131,9 @@ nav::after {
 
 .nav-bkg {
     position: absolute;
+    display: none;
     width: 100vw;
     height: 100vh;
     background-color: var(--clr-background);
     z-index: 1;
-    opacity: 0;
 }

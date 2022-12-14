@@ -34,7 +34,7 @@ function headerSpawned() {
     $(window).resize(function() {
         if ($('body').width() >= 550) {
             $('.navigation').css("display", "flex");
-            $('.nav-bkg').css("opacity", "0");
+            $('.nav-bkg').css("display", "none");
         } else {
             $('.navigation').css("display", "none");
         }
@@ -44,11 +44,11 @@ function headerSpawned() {
         console.log("triggered");
         if (clicked == false) {
             $('.navigation').css("display", "flex");
-            $('.nav-bkg').css("opacity", "1");
+            $('.nav-bkg').css("display", "initial");
             clicked = true;
         } else {
             $('.navigation').css("display", "none");
-            $('.nav-bkg').css("opacity", "0");
+            $('.nav-bkg').css("display", "none");
             clicked = false;
         }
     });
