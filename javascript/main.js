@@ -15,7 +15,6 @@ $('head').append(`<link rel="stylesheet" href="/css/header.css"/>`);
 function headerSpawned() {
     let clicked = false;
 
-    //TODO Update if statements to include galleries and projects
     if (doc == '/index.html' || doc == '/') {
         $('#about').css({'color': 'rgb(200, 200, 200)'});
     } else if (doc.includes("portfolio") == true || 

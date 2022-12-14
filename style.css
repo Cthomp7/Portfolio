@@ -36,13 +36,14 @@ body {
 }
 
 #intro {
+    /* height: 500px; */
     height: 60vmin;
+    display: flex;
 }
 
 #sub-intro {
-    position: relative;
-    top: 20vmin;
-    left: 15vmin;
+    text-align: center;
+    margin: auto auto;
 }
 
 #sub-intro-col-2 {
@@ -52,28 +53,27 @@ body {
 .content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
-    gap: 3em;
-    justify-content: space-between;
-    margin: 5vmin;
-    height: 60vh;
+    gap: 4em;
+    max-width: 1000px;
+    margin: 5vmin auto;
     animation-duration: 2s;
     opacity: 0;
 }
 
 .content img {
-    margin: auto 0;
+    margin: auto auto;
     width: 100%;
-    transform: scale(.9);
+    /* max-width: 478px; */
 }
 
 .content-box {
-    margin: 2em auto;
+    margin: 0 auto;
     padding: 0;
     border: 2px solid white;
     z-index: -1;
     animation-duration: 4s;
-    opacity: 0;
-    max-width: 478px;
+    /* max-width: 478px; */
+    height:fit-content;
 }
 
 .content-box-title {
@@ -100,10 +100,48 @@ body {
     margin: 1.5em;
 }
 
+.arrow-container {
+    display: flex;
+    justify-content: center;
+}
+
+.arrow {
+    max-width: 25px;
+    position: relative;
+    transform: translateY(-70%);
+    animation: arrow-animation 1s linear 2s infinite alternate;
+}
+
+@keyframes arrow-animation {
+    from {transform: translateY(-70%);}
+    to {transform: translateY(-20%);}
+}
+
+@keyframes disappear {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+#port-con {
+    border: 2px solid white;
+}
+
+@media (max-width: 1070px) {
+    .content {
+        margin: 6vmin;
+    }
+}
+
 @media (max-width: 790px) {
+    .content {
+        gap: 0;
+    }
+    .content-box {
+        margin: 2em auto;
+    }
     .content img {
         width: 80%;
-        margin: 0 auto;
+        margin: auto auto;
     }
 
     .content-box-title h2 {
@@ -112,7 +150,7 @@ body {
     }
 
     .content-box p {
-        font-size: .8rem;
+        font-size: 1rem;
     }
 }
 
@@ -151,6 +189,30 @@ body {
     from {left: -1em; opacity: 100%;};
     to {left: -50vw; opacity: 0%;};
 }
+
+/* @media (max-width: 700px) {
+    #intro {
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    #intro {
+        height: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    #intro {
+        height: 270px;
+    }
+}
+
+@media (max-width: 400px) {
+    #intro {
+        height: 220px;
+    }
+} */
 
 #defaultCanvas0 {
     position: absolute; 

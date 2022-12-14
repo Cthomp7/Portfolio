@@ -6,8 +6,14 @@ $(window).scroll(function() {
       $('.content-box-title h2').css({
         'animation-name': 'content-box-title_right', 
         'opacity': '100'});
-      $('.content').css({'animation-name': 'content-box_left', 
-      'opacity': '100'});
+      $('.content').css({
+        'animation-name': 'content-box_left', 
+        'opacity': '100'});
+      $('.arrow').css({
+        'animation-name':'disappear', 'animation-iteration-count':'1','animation-direction':'initial',
+        'animation-delay':'initial',
+        'opacity':'0',
+        'display':'none'});
     }
     if ($(window).scrollTop() > 100) {
         // $('.content-box').css({
@@ -19,14 +25,14 @@ $(window).scroll(function() {
     }
   });
 
-let names = ["Chloe", "MlgChloe", "Chlobotic", "Chloboswag", "Clob"];
-let i = 0;
-changeName();
+// let names = ["Chloe", "MlgChloe", "Chlobotic", "Chloboswag", "Clob"];
+// let i = 0;
+// changeName();
 
-function changeName() {
-  if (i >= 5) {
-    i = 0;
-  }
-  i++;
-  setTimeout(changeName, 3000);
-}
+// function changeName() {
+//   if (i >= 5) {
+//     i = 0;
+//   }
+//   i++;
+//   setTimeout(changeName, 3000);
+// }
