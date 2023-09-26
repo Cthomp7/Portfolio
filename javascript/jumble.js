@@ -6,19 +6,20 @@
 
 let timeout;
 
-for (let i = 0; i < $('.jumble').length; i++) {
-    $('.jumble').eq(i).data("originalname", $('.jumble').eq(i).text());
-    console.log($('.jumble').eq(i).data("originalname"));
+for (let i = 0; i < $('p').length; i++) {
+    jumble($('p')[i], i);
+    //$('p').eq(i).data("originalname", $('p').eq(i).text());
+    //console.log($('.jumble').eq(i).data("originalname"));
 }
 
-$('.jumble').mouseenter(function() { 
-    jumble($(this), $('.jumble').index($(this)));
-});
+//$('.jumble').mouseenter(function() { 
+    //jumble($(this), $('.jumble').index($(this)));
+//});
 
-$('.jumble').mouseout(function() { 
-    stop();
-    $(this).text($(this).data('originalname'));
-});
+//$('.jumble').mouseout(function() { 
+    //stop();
+    //$(this).text($(this).data('originalname'));
+//});
 
 function jumble(obj, order, ogName) {
 
